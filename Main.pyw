@@ -6,7 +6,7 @@ import platform
 import pyautogui as pg
 import webbrowser as web
 
-api = telebot.TeleBot('2032563974:AAEXIpx2HocG9hnXntNPz9xhYcuM3AqV0Rc')
+api = telebot.TeleBot('Токен бота')
 
 class Menu:
 	def __init__(self, chat_id, answer):
