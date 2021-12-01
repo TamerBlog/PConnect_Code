@@ -36,13 +36,13 @@ def main_menu(message):
 @api.message_handler(content_types=['text'])
 def last_menu(message):
 	if message.text == 'Перейти к управлению':
-		Menu.LastMenu(Menu(message.chat.id, f'💠 Панель управления'))
+		Menu.LastMenu(Menu(message.chat.id, f'Панель управления'))
 	elif message.text == 'Главное меню':
-		Menu.MainMenu(Menu(message.chat.id, f'💠 Главное меню'))
+		Menu.MainMenu(Menu(message.chat.id, f'Главное меню'))
 	elif message.text == 'Назад':
-		Menu.LastMenu(Menu(message.chat.id, f'💠 Панель управления'))
+		Menu.LastMenu(Menu(message.chat.id, f'Панель управления'))
 	elif message.text == 'Открыть сайт':
-		Menu.SiteMenu(Menu(message.chat.id, f'💠 Выбор сайта'))
+		Menu.SiteMenu(Menu(message.chat.id, f'Выбор сайта'))
 	elif message.text == 'Скриншот':
 		api.send_photo(message.chat.id, pg.screenshot("screenshot.png"))
 		os.remove("screenshot.png")
