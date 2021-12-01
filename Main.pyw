@@ -1,7 +1,6 @@
 import os
 import time
 import telebot
-import platform
 import pyautogui as pg
 import webbrowser as web
 
@@ -37,13 +36,13 @@ def main_menu(message):
 @api.message_handler(content_types=['text'])
 def last_menu(message):
 	if message.text == 'Перейти к управлению':
-		Menu.LastMenu(Menu(message.chat.id, f'💠 Панель управления\n\n👤\n\n🖥 {platform.system()} {platform.release()}'))
+		Menu.LastMenu(Menu(message.chat.id, f'💠 Панель управления'))
 	elif message.text == 'Главное меню':
-		Menu.MainMenu(Menu(message.chat.id, f'💠 Главное меню\n\n👤\n\n🖥 {platform.system()} {platform.release()}'))
+		Menu.MainMenu(Menu(message.chat.id, f'💠 Главное меню'))
 	elif message.text == 'Назад':
-		Menu.LastMenu(Menu(message.chat.id, f'💠 Панель управления\n\n👤\n\n🖥 {platform.system()} {platform.release()}'))
+		Menu.LastMenu(Menu(message.chat.id, f'💠 Панель управления'))
 	elif message.text == 'Открыть сайт':
-		Menu.SiteMenu(Menu(message.chat.id, f'💠 Выбор сайта\n\n👤\n\n🖥 {platform.system()} {platform.release()}'))
+		Menu.SiteMenu(Menu(message.chat.id, f'💠 Выбор сайта'))
 	elif message.text == 'Скриншот':
 		api.send_photo(message.chat.id, pg.screenshot("screenshot.png"))
 		os.remove("screenshot.png")
